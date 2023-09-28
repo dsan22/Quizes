@@ -1,0 +1,31 @@
+﻿<Window x:Class="Projekat.MyWindows.UserWindows.UserWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d"
+        Title="UserWindow" Height="450" Width="800">
+    <Grid>
+
+
+
+        <Menu Height="30" Name="menu1" Width="800"  Margin="0,10,0,0" HorizontalAlignment="Center" VerticalAlignment="Top" VerticalContentAlignment="Center" Background="Chocolate">
+            <MenuItem Header="Logout"  Padding="5" Margin="10 0 0 0" Click="Logout" />
+        </Menu>
+
+
+        <ListBox x:Name="quizesListBox"  Background="#FFE8DEDE" Margin="59,125,237,56"/>
+        <Button x:Name="doQuizBtn" Content="Do Quiz" HorizontalAlignment="Left" Margin="626,230,0,0" VerticalAlignment="Top" Height="44" Width="99" Click="DoQuizBtn_Click"/>
+        <TextBox x:Name="searchTextBox" HorizontalAlignment="Left" Margin="211,74,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="226" TextChanged="SearchTextChanged" />
+        <Label Content="Search :" HorizontalAlignment="Left" Margin="140,70,0,0" VerticalAlignment="Top"/>
+
+
+
+
+
+
+
+
+
+    </Grid>
+</Window>

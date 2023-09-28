@@ -1,0 +1,32 @@
+﻿<Window x:Class="Projekat.MyWindows.AdminWindows.QuizWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d"
+        Title="QuizWindow" Height="450" Width="800">
+    <Grid Margin="0,0,0,-6">
+        <Menu Height="30" Name="menu1" Width="800"  Margin="0,10,0,0" HorizontalAlignment="Center" VerticalAlignment="Top" VerticalContentAlignment="Center" Background="Chocolate">
+            <MenuItem Header="Logout"  Padding="5" Margin="10 0 0 0" Click="Logout" />
+            <MenuItem Header="Quizes"  Padding="5" Click="GoBackToQuizes"  />
+        </Menu>
+        
+        <Label x:Name="nameLabel" Content="Quiz:" HorizontalAlignment="Center" Margin="0,38,0,0" VerticalAlignment="Top" Width="800" HorizontalContentAlignment="Center" FontSize="24"/>
+        <ListBox x:Name="questionListBox"  Background="#FFE8DEDE" Margin="72,124,467,97" SelectionChanged="OnSelectionChanged"/>
+        <Label Content="Questions:" HorizontalAlignment="Left" Margin="170,69,0,0" VerticalAlignment="Top" Height="44" VerticalContentAlignment="Center"/>
+        <Label Content="Question" HorizontalAlignment="Left" Margin="555,78,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="answer1TextBox" HorizontalAlignment="Left" Margin="457,203,0,0" TextWrapping="Wrap" Text="Answer 1" VerticalAlignment="Top" Width="175"/>
+        <TextBox x:Name="answer2TextBox" HorizontalAlignment="Left" Margin="457,244,0,0" TextWrapping="Wrap" Text="Answer 2" VerticalAlignment="Top" Width="175"/>
+        <TextBox x:Name="answer3TextBox" HorizontalAlignment="Left" Margin="457,283,0,0" TextWrapping="Wrap" Text="Answer 3" VerticalAlignment="Top" Width="175"/>
+        <TextBox x:Name="answer4TextBox" HorizontalAlignment="Left" Margin="457,325,0,0" TextWrapping="Wrap" Text="Answer 4" VerticalAlignment="Top" Width="175"/>
+        <RadioButton Name="answer1Radio" Content="Correct" GroupName="Correct" IsChecked="True"  HorizontalAlignment="Left" Margin="653,205,0,0" VerticalAlignment="Top" />
+        <RadioButton Name="answer2Radio" Content="Correct" GroupName="Correct"  HorizontalAlignment="Left" Margin="653,246,0,0" VerticalAlignment="Top" />
+        <RadioButton Name="answer3Radio" Content="Correct" GroupName="Correct"  HorizontalAlignment="Left" Margin="653,286,0,0" VerticalAlignment="Top" />
+        <RadioButton Name="answer4Radio" Content="Correct" GroupName="Correct"  HorizontalAlignment="Left" Margin="653,325,0,0" VerticalAlignment="Top" />
+        <Button x:Name="saveQuestionButton" Content="Save Question" HorizontalAlignment="Left" Margin="503,364,0,0" VerticalAlignment="Top" Height="24" Width="168" Click="SaveQuestionButton_Click"/>
+        <TextBox x:Name="questionTextBox" HorizontalAlignment="Left" Margin="457,124,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="254" Height="47"/>
+        <Button x:Name="AddBtn" Content="Add Question" HorizontalAlignment="Left" Margin="72,364,0,0" VerticalAlignment="Top" Height="24" Width="116" Click="AddBtn_Click"/>
+        <Button x:Name="DeleteBtn" Content="Delete Question" HorizontalAlignment="Left" Margin="217,364,0,0" VerticalAlignment="Top" Height="24" Width="116" Click="DeleteBtn_Click"/>
+
+    </Grid>
+</Window>

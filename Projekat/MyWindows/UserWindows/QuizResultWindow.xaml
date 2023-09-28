@@ -1,0 +1,42 @@
+﻿<Window x:Class="Projekat.MyWindows.UserWindows.QuizResultWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Projekat.MyWindows.UserWindows"
+        mc:Ignorable="d"
+        Title="QuizResultWindow" Height="450" Width="800">
+    <Grid>
+        <Menu Height="30" Name="menu1" Width="800"  Margin="0,10,0,0" HorizontalAlignment="Center" VerticalAlignment="Top" VerticalContentAlignment="Center" Background="Chocolate">
+            <MenuItem Header="Logout"  Padding="5" Margin="10 0 0 0" Click="Logout" />
+            <MenuItem Header="Quizes"  Padding="5" Click="GoBackToQuizes"  />
+        </Menu>
+        
+        <DataGrid Name="dataGrid" AutoGenerateColumns="False"  Margin="32,68,255,24" IsReadOnly="True"   >
+
+            <DataGrid.RowStyle>
+                <Style TargetType="DataGridRow">
+                    <Style.Triggers>
+                        <DataTrigger Binding="{Binding IsCorrect}" Value="True">
+                            <Setter Property="Background" Value="Lime"/>
+                        </DataTrigger>
+                        <DataTrigger Binding="{Binding IsCorrect}" Value="False">
+                            <Setter Property="Background" Value="OrangeRed"/>
+                        </DataTrigger>
+                        <!-- Add more DataTriggers as needed for different conditions -->
+                    </Style.Triggers>
+                </Style>
+            </DataGrid.RowStyle>
+            <DataGrid.Columns>
+                <DataGridTextColumn x:Name="questionColumn" Header="Question" Width="*" Binding="{Binding Question}" />
+                <DataGridTextColumn x:Name="answerColumn" Header="Answer" Width="*" Binding="{Binding Answer}" />
+                <DataGridTextColumn x:Name="correctColumn" Header="Correct" Width="*" Binding="{Binding CorrectAnswer}" />
+            </DataGrid.Columns>
+        </DataGrid>
+        <Label Content="Your score is:" HorizontalAlignment="Left" Margin="572,86,0,0" VerticalAlignment="Top" Width="228" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+        <Label Name="scoreLabel" Content="x / y" HorizontalAlignment="Left" Margin="572,117,0,0" VerticalAlignment="Top" Width="228" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+        <Label Name="percentageLabel" Content="x%" HorizontalAlignment="Left" Margin="572,148,0,0" VerticalAlignment="Top" Width="228" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+        
+
+    </Grid>
+</Window>
