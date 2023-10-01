@@ -32,8 +32,8 @@ namespace Projekat
             try
             {
                 string username = usernameTextBox.Text;
-                string password = passwordTextBox.Text;
-                string retypePassword = retypePasswordTextBox.Text;
+                string password = passwordTextBox.Password;
+                string retypePassword = retypePasswordTextBox.Password;
             
                 bool? isAdmin= adminCheckBox.IsChecked;
                 if(isAdmin==null) return;

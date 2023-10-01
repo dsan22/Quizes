@@ -4,7 +4,7 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         mc:Ignorable="d"
-        Title="QuizWindow" Height="450" Width="800">
+        Title="Quiz" Height="450" Width="800">
     <Grid Margin="0,0,0,-6">
         <Menu Height="30" Name="menu1" Width="800"  Margin="0,10,0,0" HorizontalAlignment="Center" VerticalAlignment="Top" VerticalContentAlignment="Center" Background="Chocolate">
             <MenuItem Header="Logout"  Padding="5" Margin="10 0 0 0" Click="Logout" />

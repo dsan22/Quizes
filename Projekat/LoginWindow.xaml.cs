@@ -21,7 +21,7 @@ namespace Projekat
             try
             {
                 string username = usernameTextBox.Text;
-                string password = passwordTextBox.Text;
+                string password = passwordTextBox.Password;
 
                 Model.User user = Model.User.GetByUsernameAndPassword(username,password);
                 if (user.IsAdmin)

@@ -11,11 +11,12 @@
         <Label x:Name="usernameLabel" Content="Username:" HorizontalAlignment="Center" Margin="0,22,0,0" VerticalAlignment="Top" Height="26" Width="64"/>
         <Label x:Name="passwordLabel" Content="Password:" HorizontalAlignment="Center" Margin="0,102,0,0" VerticalAlignment="Top" Height="26" Width="64"/>
         <TextBox x:Name="usernameTextBox" HorizontalAlignment="Center" VerticalContentAlignment="Center" Margin="0,53,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="308" Height="28" TextAlignment="Center"/>
-        <TextBox x:Name="passwordTextBox" HorizontalAlignment="Center" VerticalContentAlignment="Center" Margin="0,133,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="308" Height="28" TextAlignment="Center"/>
+        <PasswordBox x:Name="passwordTextBox" HorizontalContentAlignment="Center"  HorizontalAlignment="Center" VerticalContentAlignment="Center" Margin="0,133,0,0"  VerticalAlignment="Top" Width="308" Height="28" />
 
         <Button x:Name="registerBtn" Content="Register" HorizontalAlignment="Center" Margin="0,304,0,0" VerticalAlignment="Top" Height="30" Width="174" Click="RegisterBtn_Click"/>
         <Label x:Name="retypePasswordLabel" Content="Retype password:" HorizontalAlignment="Center" Margin="0,186,0,0" VerticalAlignment="Top" Height="26" Width="174" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
-        <TextBox x:Name="retypePasswordTextBox" HorizontalAlignment="Center" VerticalContentAlignment="Center" Margin="0,217,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="308" Height="28" TextAlignment="Center"/>
+        <PasswordBox x:Name="retypePasswordTextBox" HorizontalContentAlignment="Center"  HorizontalAlignment="Center" VerticalContentAlignment="Center" Margin="0,217,0,0"  VerticalAlignment="Top" Width="308" Height="28" />
         <CheckBox x:Name="adminCheckBox" Content="  Admin Profile" HorizontalAlignment="Center" Margin="0,269,0,0" VerticalAlignment="Top" Height="20" Width="120"/>
+        
     </Grid>
 </Window>
